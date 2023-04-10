@@ -57,10 +57,11 @@ nav a:hover {
 main {
   min-width: 300px;
   max-width: 1000px;
+  height: 380px;
   margin: auto;
   margin-bottom: 30px;
   padding: 20px;
-  background-color: rgb(112, 111, 111);
+  background-color: black;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -86,6 +87,14 @@ main {
   height: 100%;
   width: 100%;
   vertical-align: top;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
 }
 
 .slider input {
@@ -93,7 +102,7 @@ main {
 }
 
 .slider label {
-  background-color: #000;
+  background-color: white;
   bottom: 10px;
   cursor: pointer;
   display: block;
@@ -101,6 +110,7 @@ main {
   position: absolute;
   width: 10px;
   z-index: 10;
+  margin-bottom: -30px;
 }
 
 .slider li:nth-child(1) label {
